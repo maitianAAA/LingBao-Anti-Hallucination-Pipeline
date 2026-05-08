@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "lingbao-ahp"
+version = "0.1.0"
+description = "灵宝 AHP 反幻觉管线 · 7节点分布式接力管线 (LingBao Anti-Hallucination Pipeline)"
+readme = "README.md"
+license = { text = "BSL-1.1" }
+requires-python = ">=3.10"
+authors = [
+    { name = "灵宝AI技术开发实验室", email = "34395668@qq.com" },
+]
+keywords = [
+    "anti-hallucination",
+    "agent-pipeline",
+    "multi-agent",
+    "deep-defense",
+    "chinese-nlp",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: Other/Proprietary License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "click>=8.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+[project.scripts]
+lingbao-ahp = "pipeline.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pipeline*"]
+
+[tool.setuptools.package-data]
+pipeline = ["*.md"]
