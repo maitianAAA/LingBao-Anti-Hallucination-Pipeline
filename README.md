@@ -1,9 +1,12 @@
-# LingBao-Anti-Hallucination-Pipeline
-灵宝 AHP | 七节点中继 Agent 反幻觉工作流
-This is the LingBao Anti-Hallucination Pipeline, an original dedicated 7-node relay Agent workflow, built as a deterministic, fully transparent anti-hallucination core framework. It adopts strict one-way information isolation and full traceability mechanism to fundamentally resolve inherent structural LLM hallucination defects, serving as an independent, controllable alternative to AutoGen, LangGraph and MetaGPT.
-编程领域抗幻觉Agent工作流，灵宝 AHP 抗幻觉管线 | LingBao Anti-Hallucination Pipeline
+# LingBao Anti-Hallucination Pipeline | Programming Hallucination Mitigation Agentic Workflow
 
-这是一套自研的 AI 反幻觉处理管线，通过 7 个核心节点对模型输出进行校验、过滤与修正，提升生成内容的事实性、逻辑性与安全性。
+灵宝 AHP｜编程领域专用 七节点中继 Agent 抗幻觉工作流
+
+This is the original LingBao Anti-Hallucination Pipeline, a dedicated framework built exclusively for programming scenarios.
+Focus on eliminating code generation hallucination, wrong syntax, logic error and fictional API problems.
+With strict one-way information isolation and full traceability, as an independent controllable alternative to mainstream agent frameworks.
+
+编程领域专属抗幻觉Agent工作流，灵宝AHP编程场景专用抗幻觉管线
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://python.org)
 [![License](https://img.shields.io/badge/License-BSL_1.1-orange)](LICENSE)
@@ -28,12 +31,12 @@ This is the LingBao Anti-Hallucination Pipeline, an original dedicated 7-node re
 
 ```mermaid
 graph LR
-    N1["① 共识生成"] -->|"🛑 闸门一"| N2["② 意图翻译"]
-    N2 -->|"🛑 闸门二"| N3["③ 创新策展"]
-    N3 -->|"🛑 闸门三"| N4["④ 架构师"]
-    N4 --> N5["⑤ 代码实现师"]
-    N5 --> N6["⑥ 工程落地师"]
-    N6 --> N7["⑦ 代码审计师"]
+    N1["① 共识生成<br/>Consensus Generation"] -->|"🛑 闸门一<br/>Gate 1"| N2["② 意图翻译<br/>Intent Translation"]
+    N2 -->|"🛑 闸门二<br/>Gate 2"| N3["③ 创新策展<br/>Innovation Curation"]
+    N3 -->|"🛑 闸门三<br/>Gate 3"| N4["④ 架构师<br/>Architect"]
+    N4 --> N5["⑤ 代码实现师<br/>Code Implementer"]
+    N5 --> N6["⑥ 工程落地师<br/>Engineer"]
+    N6 --> N7["⑦ 代码审计师<br/>Code Auditor"]
 
     style N1 fill:#e1f5fe,stroke:#0288d1
     style N2 fill:#e1f5fe,stroke:#0288d1
@@ -50,20 +53,20 @@ graph LR
 
 ```mermaid
 graph TB
-    subgraph L5["Layer 5 · 文件协议校验"]
-        L5A["统一命名规范 · 格式错误即暴露"]
+    subgraph L5["Layer 5 · 文件协议校验<br/>File Protocol Validation"]
+        L5A["统一命名规范 · 格式错误即暴露<br/>Unified naming conventions, format errors exposed immediately"]
     end
-    subgraph L4["Layer 4 · 审计限定"]
-        L4A["仅查代码 · 不越权回溯需求"]
+    subgraph L4["Layer 4 · 审计限定<br/>Audit Boundary"]
+        L4A["仅查代码 · 不越权回溯需求<br/>Code-only review, no overreach into requirements"]
     end
-    subgraph L3["Layer 3 · 人工闸门"]
-        L3A["三道固定断点 · 阻断幻觉级联"]
+    subgraph L3["Layer 3 · 人工闸门<br/>Human-in-the-Loop Gates"]
+        L3A["三道固定断点 · 阻断幻觉级联<br/>Three fixed breakpoints to stop hallucination cascades"]
     end
-    subgraph L2["Layer 2 · 单向信息流"]
-        L2A["只读上游 · 禁止跨级回溯"]
+    subgraph L2["Layer 2 · 单向信息流<br/>Unidirectional Information Flow"]
+        L2A["只读上游 · 禁止跨级回溯<br/>Read-only upstream access, no cross-level backtracking"]
     end
-    subgraph L1["Layer 1 · 上下文隔离"]
-        L1A["Agent 间完全隔离 · 单文件传递"]
+    subgraph L1["Layer 1 · 上下文隔离<br/>Context Isolation"]
+        L1A["Agent 间完全隔离 · 单文件传递<br/>Full agent isolation, single-file handoff only"]
     end
 
     L5 --- L4 --- L3 --- L2 --- L1
@@ -148,8 +151,19 @@ class MyConsensusAgent(ConsensusAgent):
 | 信息流纪律 | 严格单向 | 共享上下文 | 共享 State | 共享上下文 |
 | 人工闸门 | 三道固定断点 | 未文档化 | 动态中断 | Agent 对 Agent |
 | 工程隔离 | 完全隔离 | 无 | 无 | 无 |
-| 协作模式 | 单一接力 | Swarm/Selector/Teams | 有向图/子图 | 装配线 |
+| 协作模式 | 单一接力 | Swarm/Selector/Teams | 有向图 / 子图 | 装配线 |
 | 许可证 | BSL | MIT | Apache 2.0 | MIT |
+
+## Comparison with Industry Solutions
+
+| Dimension | LingBao AHP | AutoGen | LangGraph | MetaGPT |
+|---|---|---|---|---|
+| Hallucination Control | ★★★★★ 5-layer in-depth | ★★ Event-driven | ★★★ Interrupt | ★★★ SOP |
+| Information Flow | Strict unidirectional | Shared context | Shared State | Shared context |
+| Human Gate | Three fixed breakpoints | Undocumented | Dynamic interrupt | Agent to Agent |
+| Engineering Isolation | Full isolation | None | None | None |
+| Collaboration Mode | Linear relay | Swarm/Selector/Teams | Directed graph / Subgraph | Assembly line |
+| License | BSL | MIT | Apache 2.0 | MIT |
 
 ---
 
@@ -168,14 +182,25 @@ class MyConsensusAgent(ConsensusAgent):
 - **社区反馈/问题建议**：提交 Issues
 - **技术来源**：灵宝AI技术开发实验室
 
+## Contact
+
+- **Business Cooperation & Licensing**: 34395668@qq.com
+- **Community Feedback & Suggestions**: Submit Issues
+- **Technical Origin**: LingBao AI Technology Development Laboratory
+
 ---
 
 ## 为什么选择灵宝 AHP
-
 1. **幻觉防线最深**：五层纵深防御，业界没有第二家
 2. **信息流最纯净**：每节点只读一个上游文件，零交叉污染
 3. **可追溯可复现**：固定顺序接力 + 标准化文件协议，输出 100% 可溯源
 4. **无黑盒依赖**：不绑定任何 LLM 后端，Agent 逻辑完全透明
+
+## Why Choose LingBao AHP
+1. **Deepest Anti-Hallucination Defense**: 5-layer in-depth protection, unmatched in the industry
+2. **Purest Information Flow**: Each node reads only one upstream file, zero cross-contamination
+3. **Traceable & Reproducible**: Fixed-sequence relay + standardized file protocols, 100% traceable output
+4. **No Black-Box Dependencies**: Not tied to any specific LLM backend; all agent logic is fully transparent
 
 ---
 
