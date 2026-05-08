@@ -1,4 +1,6 @@
 # LingBao-Anti-Hallucination-Pipeline
+灵宝 AHP | 七节点中继 Agent 反幻觉工作流
+This is the LingBao Anti-Hallucination Pipeline, an original dedicated 7-node relay Agent workflow, built as a deterministic, fully transparent anti-hallucination core framework. It adopts strict one-way information isolation and full traceability mechanism to fundamentally resolve inherent structural LLM hallucination defects, serving as an independent, controllable alternative to AutoGen, LangGraph and MetaGPT.
 编程领域抗幻觉Agent工作流，灵宝 AHP 抗幻觉管线 | LingBao Anti-Hallucination Pipeline
 
 这是一套自研的 AI 反幻觉处理管线，通过 7 个核心节点对模型输出进行校验、过滤与修正，提升生成内容的事实性、逻辑性与安全性。
