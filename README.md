@@ -2,7 +2,7 @@
 
 灵宝 AHP｜编程领域专用 七节点中继 Agent 抗幻觉工作流
 
-This is the original LingBao Anti-Hallucination Pipeline, a dedicated framework built exclusively for programming scenarios.
+This is the original LingBao Anti-Hallucination Pipeline, a dedicated framework built exclusively for coding scenarios.
 Focus on eliminating code generation hallucination, wrong syntax, logic error and fictional API problems.
 With strict one-way information isolation and full traceability, as an independent controllable alternative to mainstream agent frameworks.
 
